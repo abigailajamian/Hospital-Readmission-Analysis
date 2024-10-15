@@ -1,0 +1,2146 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.23.0627.1201                               -->
+<workbook original-version='18.1' source-build='2021.4.19 (20214.23.0627.1201)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.SingleValuePerNestSorting.true...SingleValuePerNestSorting />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='patient+ (medical_data)' inline='true' name='federated.07l76k310dnxj31a7ox410ujxgom' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.0bfiis717vr0hi1fitwv21rlui9j'>
+            <connection authentication='username-password' class='postgres' dbname='medical_data' one-time-sql='' port='5432' server='localhost' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.0bfiis717vr0hi1fitwv21rlui9j' name='Custom SQL Query' type='text'>SELECT &quot;patient&quot;.&quot;additional_charges&quot; AS &quot;additional_charges&quot;,
+  &quot;patient&quot;.&quot;admis_id&quot; AS &quot;admis_id&quot;,
+  &quot;external_ds&quot;.&quot;age&quot; AS &quot;age (external_ds)&quot;,
+  &quot;patient&quot;.&quot;age&quot; AS &quot;age&quot;,
+  &quot;patient&quot;.&quot;children&quot; AS &quot;children&quot;,
+  &quot;patient&quot;.&quot;compl_id&quot; AS &quot;compl_id&quot;,
+  &quot;external_ds&quot;.&quot;condit&quot; AS &quot;condit&quot;,
+  &quot;patient&quot;.&quot;doc_visits&quot; AS &quot;doc_visits&quot;,
+  &quot;patient&quot;.&quot;full_meals&quot; AS &quot;full_meals&quot;,
+  &quot;external_ds&quot;.&quot;gender&quot; AS &quot;gender (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;gender&quot; AS TEXT) AS &quot;gender&quot;,
+  CAST(&quot;patient&quot;.&quot;hignblood&quot; AS TEXT) AS &quot;hignblood&quot;,
+  &quot;patient&quot;.&quot;income&quot; AS &quot;income&quot;,
+  &quot;external_ds&quot;.&quot;initial_days&quot; AS &quot;initial_days (external_ds)&quot;,
+  &quot;patient&quot;.&quot;initial_days&quot; AS &quot;initial_days&quot;,
+  &quot;patient&quot;.&quot;job_id&quot; AS &quot;job_id&quot;,
+  &quot;patient&quot;.&quot;lat&quot; AS &quot;lat&quot;,
+  &quot;patient&quot;.&quot;lng&quot; AS &quot;lng&quot;,
+  &quot;patient&quot;.&quot;location_id&quot; AS &quot;location_id&quot;,
+  CAST(&quot;patient&quot;.&quot;marital&quot; AS TEXT) AS &quot;marital&quot;,
+  &quot;external_ds&quot;.&quot;outcome&quot; AS &quot;outcome&quot;,
+  CAST(&quot;external_ds&quot;.&quot;patient_id&quot; AS TEXT) AS &quot;patient_id (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;patient_id&quot; AS TEXT) AS &quot;patient_id&quot;,
+  &quot;patient&quot;.&quot;population&quot; AS &quot;population&quot;,
+  &quot;external_ds&quot;.&quot;proce&quot; AS &quot;proce&quot;,
+  &quot;external_ds&quot;.&quot;readmis&quot; AS &quot;readmis (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;readmis&quot; AS TEXT) AS &quot;readmis&quot;,
+  &quot;external_ds&quot;.&quot;readmis_id&quot; AS &quot;readmis_id (external_ds)&quot;,
+  &quot;patient&quot;.&quot;readmis_id&quot; AS &quot;readmis_id&quot;,
+  &quot;external_ds&quot;.&quot;satisfaction&quot; AS &quot;satisfaction&quot;,
+  CAST(&quot;patient&quot;.&quot;soft_drink&quot; AS TEXT) AS &quot;soft_drink&quot;,
+  CAST(&quot;patient&quot;.&quot;stroke&quot; AS TEXT) AS &quot;stroke&quot;,
+  &quot;external_ds&quot;.&quot;totalcharge&quot; AS &quot;totalcharge (external_ds)&quot;,
+  &quot;patient&quot;.&quot;totalcharge&quot; AS &quot;totalcharge&quot;,
+  &quot;patient&quot;.&quot;vitd_levels&quot; AS &quot;vitd_levels&quot;,
+  &quot;patient&quot;.&quot;vitd_supp&quot; AS &quot;vitd_supp&quot;
+FROM &quot;public&quot;.&quot;patient&quot; &quot;patient&quot;
+  FULL JOIN &quot;public&quot;.&quot;external_ds&quot; &quot;external_ds&quot; ON (CAST(&quot;patient&quot;.&quot;patient_id&quot; AS TEXT) = CAST(&quot;external_ds&quot;.&quot;patient_id&quot; AS TEXT))</_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='postgres.0bfiis717vr0hi1fitwv21rlui9j' name='Custom SQL Query' type='text'>SELECT &quot;patient&quot;.&quot;additional_charges&quot; AS &quot;additional_charges&quot;,
+  &quot;patient&quot;.&quot;admis_id&quot; AS &quot;admis_id&quot;,
+  &quot;external_ds&quot;.&quot;age&quot; AS &quot;age (external_ds)&quot;,
+  &quot;patient&quot;.&quot;age&quot; AS &quot;age&quot;,
+  &quot;patient&quot;.&quot;children&quot; AS &quot;children&quot;,
+  &quot;patient&quot;.&quot;compl_id&quot; AS &quot;compl_id&quot;,
+  &quot;external_ds&quot;.&quot;condit&quot; AS &quot;condit&quot;,
+  &quot;patient&quot;.&quot;doc_visits&quot; AS &quot;doc_visits&quot;,
+  &quot;patient&quot;.&quot;full_meals&quot; AS &quot;full_meals&quot;,
+  &quot;external_ds&quot;.&quot;gender&quot; AS &quot;gender (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;gender&quot; AS TEXT) AS &quot;gender&quot;,
+  CAST(&quot;patient&quot;.&quot;hignblood&quot; AS TEXT) AS &quot;hignblood&quot;,
+  &quot;patient&quot;.&quot;income&quot; AS &quot;income&quot;,
+  &quot;external_ds&quot;.&quot;initial_days&quot; AS &quot;initial_days (external_ds)&quot;,
+  &quot;patient&quot;.&quot;initial_days&quot; AS &quot;initial_days&quot;,
+  &quot;patient&quot;.&quot;job_id&quot; AS &quot;job_id&quot;,
+  &quot;patient&quot;.&quot;lat&quot; AS &quot;lat&quot;,
+  &quot;patient&quot;.&quot;lng&quot; AS &quot;lng&quot;,
+  &quot;patient&quot;.&quot;location_id&quot; AS &quot;location_id&quot;,
+  CAST(&quot;patient&quot;.&quot;marital&quot; AS TEXT) AS &quot;marital&quot;,
+  &quot;external_ds&quot;.&quot;outcome&quot; AS &quot;outcome&quot;,
+  CAST(&quot;external_ds&quot;.&quot;patient_id&quot; AS TEXT) AS &quot;patient_id (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;patient_id&quot; AS TEXT) AS &quot;patient_id&quot;,
+  &quot;patient&quot;.&quot;population&quot; AS &quot;population&quot;,
+  &quot;external_ds&quot;.&quot;proce&quot; AS &quot;proce&quot;,
+  &quot;external_ds&quot;.&quot;readmis&quot; AS &quot;readmis (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;readmis&quot; AS TEXT) AS &quot;readmis&quot;,
+  &quot;external_ds&quot;.&quot;readmis_id&quot; AS &quot;readmis_id (external_ds)&quot;,
+  &quot;patient&quot;.&quot;readmis_id&quot; AS &quot;readmis_id&quot;,
+  &quot;external_ds&quot;.&quot;satisfaction&quot; AS &quot;satisfaction&quot;,
+  CAST(&quot;patient&quot;.&quot;soft_drink&quot; AS TEXT) AS &quot;soft_drink&quot;,
+  CAST(&quot;patient&quot;.&quot;stroke&quot; AS TEXT) AS &quot;stroke&quot;,
+  &quot;external_ds&quot;.&quot;totalcharge&quot; AS &quot;totalcharge (external_ds)&quot;,
+  &quot;patient&quot;.&quot;totalcharge&quot; AS &quot;totalcharge&quot;,
+  &quot;patient&quot;.&quot;vitd_levels&quot; AS &quot;vitd_levels&quot;,
+  &quot;patient&quot;.&quot;vitd_supp&quot; AS &quot;vitd_supp&quot;
+FROM &quot;public&quot;.&quot;patient&quot; &quot;patient&quot;
+  FULL JOIN &quot;public&quot;.&quot;external_ds&quot; &quot;external_ds&quot; ON (CAST(&quot;patient&quot;.&quot;patient_id&quot; AS TEXT) = CAST(&quot;external_ds&quot;.&quot;patient_id&quot; AS TEXT))</_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>additional_charges</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[additional_charges]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>additional_charges</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>admis_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[admis_id]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>admis_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age (external_ds)</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[age (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>age (external_ds)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>children</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[children]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>children</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>compl_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[compl_id]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>compl_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>condit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[condit]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>condit</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doc_visits</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[doc_visits]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>doc_visits</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>full_meals</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[full_meals]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>full_meals</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender (external_ds)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>gender (external_ds)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hignblood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hignblood]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>hignblood</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>income</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[income]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>income</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>initial_days (external_ds)</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[initial_days (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>initial_days (external_ds)</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>initial_days</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[initial_days]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>initial_days</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>job_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[job_id]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>job_id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lng</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[lng]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>lng</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[location_id]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marital</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[marital]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>marital</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>outcome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[outcome]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>outcome</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_id (external_ds)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_id (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>patient_id (external_ds)</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_id]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>patient_id</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[population]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>population</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>proce</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[proce]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>proce</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>readmis (external_ds)</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[readmis (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>readmis (external_ds)</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>readmis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[readmis]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>readmis</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>readmis_id (external_ds)</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[readmis_id (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>readmis_id (external_ds)</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>readmis_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[readmis_id]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>readmis_id</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>satisfaction</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[satisfaction]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>satisfaction</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>soft_drink</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[soft_drink]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>soft_drink</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stroke</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stroke]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>stroke</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totalcharge (external_ds)</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[totalcharge (external_ds)]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>totalcharge (external_ds)</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totalcharge</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[totalcharge]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>totalcharge</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vitd_levels</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[vitd_levels]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>vitd_levels</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vitd_supp</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[vitd_supp]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>vitd_supp</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[patient_FAF5BD4F3F77412999E5486A0F2375E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='patient' datatype='table' name='[__tableau_internal_object_id__].[patient_FAF5BD4F3F77412999E5486A0F2375E2]' role='measure' type='quantitative' />
+      <column caption='Additional Charges' datatype='real' name='[additional_charges]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Admis Id' datatype='integer' name='[admis_id]' role='dimension' type='ordinal' />
+      <column caption='Age (External Ds)' datatype='integer' name='[age (external_ds)]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Children' datatype='integer' name='[children]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Compl Id' datatype='integer' name='[compl_id]' role='dimension' type='ordinal' />
+      <column caption='Condit' datatype='string' name='[condit]' role='dimension' type='nominal' />
+      <column caption='Doc Visits' datatype='integer' name='[doc_visits]' role='measure' type='quantitative' />
+      <column caption='Full Meals' datatype='integer' name='[full_meals]' role='measure' type='quantitative' />
+      <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Hignblood' datatype='string' name='[hignblood]' role='dimension' type='nominal' />
+      <column caption='Income' datatype='real' name='[income]' role='measure' type='quantitative' />
+      <column caption='Initial Days (External Ds)' datatype='integer' name='[initial_days (external_ds)]' role='measure' type='quantitative' />
+      <column caption='Initial Days' datatype='real' name='[initial_days]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Job Id' datatype='integer' name='[job_id]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Lng' datatype='real' name='[lng]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Location Id' datatype='integer' name='[location_id]' role='dimension' type='ordinal' />
+      <column caption='Marital' datatype='string' name='[marital]' role='dimension' type='nominal' />
+      <column caption='Outcome' datatype='string' name='[outcome]' role='dimension' type='nominal' />
+      <column caption='Patient Id (External Ds)' datatype='string' name='[patient_id (external_ds)]' role='dimension' type='nominal' />
+      <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+      <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+      <column caption='Proce' datatype='string' name='[proce]' role='dimension' type='nominal' />
+      <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+      <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Readmis Id (External Ds)' datatype='integer' name='[readmis_id (external_ds)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Readmis Id' datatype='integer' name='[readmis_id]' role='dimension' type='ordinal' />
+      <column caption='Satisfaction' datatype='integer' name='[satisfaction]' role='measure' type='quantitative' />
+      <column caption='Soft Drink' datatype='string' name='[soft_drink]' role='dimension' type='nominal' />
+      <column caption='Stroke' datatype='string' name='[stroke]' role='dimension' type='nominal' />
+      <column caption='Totalcharge (External Ds)' datatype='integer' name='[totalcharge (external_ds)]' role='measure' type='quantitative' />
+      <column caption='Totalcharge' datatype='real' name='[totalcharge]' role='measure' type='quantitative' />
+      <column caption='Vitd Levels' datatype='real' name='[vitd_levels]' role='measure' type='quantitative' />
+      <column caption='Vitd Supp' datatype='integer' name='[vitd_supp]' role='measure' type='quantitative' />
+      <column-instance column='[readmis (external_ds)]' derivation='None' name='[none:readmis (external_ds):nk]' pivot='key' type='nominal' />
+      <column-instance column='[readmis]' derivation='None' name='[none:readmis:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Gender (External Ds),Readmis (External Ds))' hidden='true' name='[Action (Gender (External Ds),Readmis (External Ds))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[gender (external_ds)]' />
+          <groupfilter function='level-members' level='[readmis (external_ds)]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Gender,Readmis)' hidden='true' name='[Action (Gender,Readmis)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[gender]' />
+          <groupfilter function='level-members' level='[readmis]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:readmis (external_ds):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:readmis:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='patient' id='patient_FAF5BD4F3F77412999E5486A0F2375E2'>
+            <properties context=''>
+              <relation connection='postgres.0bfiis717vr0hi1fitwv21rlui9j' name='Custom SQL Query' type='text'>SELECT &quot;patient&quot;.&quot;additional_charges&quot; AS &quot;additional_charges&quot;,
+  &quot;patient&quot;.&quot;admis_id&quot; AS &quot;admis_id&quot;,
+  &quot;external_ds&quot;.&quot;age&quot; AS &quot;age (external_ds)&quot;,
+  &quot;patient&quot;.&quot;age&quot; AS &quot;age&quot;,
+  &quot;patient&quot;.&quot;children&quot; AS &quot;children&quot;,
+  &quot;patient&quot;.&quot;compl_id&quot; AS &quot;compl_id&quot;,
+  &quot;external_ds&quot;.&quot;condit&quot; AS &quot;condit&quot;,
+  &quot;patient&quot;.&quot;doc_visits&quot; AS &quot;doc_visits&quot;,
+  &quot;patient&quot;.&quot;full_meals&quot; AS &quot;full_meals&quot;,
+  &quot;external_ds&quot;.&quot;gender&quot; AS &quot;gender (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;gender&quot; AS TEXT) AS &quot;gender&quot;,
+  CAST(&quot;patient&quot;.&quot;hignblood&quot; AS TEXT) AS &quot;hignblood&quot;,
+  &quot;patient&quot;.&quot;income&quot; AS &quot;income&quot;,
+  &quot;external_ds&quot;.&quot;initial_days&quot; AS &quot;initial_days (external_ds)&quot;,
+  &quot;patient&quot;.&quot;initial_days&quot; AS &quot;initial_days&quot;,
+  &quot;patient&quot;.&quot;job_id&quot; AS &quot;job_id&quot;,
+  &quot;patient&quot;.&quot;lat&quot; AS &quot;lat&quot;,
+  &quot;patient&quot;.&quot;lng&quot; AS &quot;lng&quot;,
+  &quot;patient&quot;.&quot;location_id&quot; AS &quot;location_id&quot;,
+  CAST(&quot;patient&quot;.&quot;marital&quot; AS TEXT) AS &quot;marital&quot;,
+  &quot;external_ds&quot;.&quot;outcome&quot; AS &quot;outcome&quot;,
+  CAST(&quot;external_ds&quot;.&quot;patient_id&quot; AS TEXT) AS &quot;patient_id (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;patient_id&quot; AS TEXT) AS &quot;patient_id&quot;,
+  &quot;patient&quot;.&quot;population&quot; AS &quot;population&quot;,
+  &quot;external_ds&quot;.&quot;proce&quot; AS &quot;proce&quot;,
+  &quot;external_ds&quot;.&quot;readmis&quot; AS &quot;readmis (external_ds)&quot;,
+  CAST(&quot;patient&quot;.&quot;readmis&quot; AS TEXT) AS &quot;readmis&quot;,
+  &quot;external_ds&quot;.&quot;readmis_id&quot; AS &quot;readmis_id (external_ds)&quot;,
+  &quot;patient&quot;.&quot;readmis_id&quot; AS &quot;readmis_id&quot;,
+  &quot;external_ds&quot;.&quot;satisfaction&quot; AS &quot;satisfaction&quot;,
+  CAST(&quot;patient&quot;.&quot;soft_drink&quot; AS TEXT) AS &quot;soft_drink&quot;,
+  CAST(&quot;patient&quot;.&quot;stroke&quot; AS TEXT) AS &quot;stroke&quot;,
+  &quot;external_ds&quot;.&quot;totalcharge&quot; AS &quot;totalcharge (external_ds)&quot;,
+  &quot;patient&quot;.&quot;totalcharge&quot; AS &quot;totalcharge&quot;,
+  &quot;patient&quot;.&quot;vitd_levels&quot; AS &quot;vitd_levels&quot;,
+  &quot;patient&quot;.&quot;vitd_supp&quot; AS &quot;vitd_supp&quot;
+FROM &quot;public&quot;.&quot;patient&quot; &quot;patient&quot;
+  FULL JOIN &quot;public&quot;.&quot;external_ds&quot; &quot;external_ds&quot; ON (CAST(&quot;patient&quot;.&quot;patient_id&quot; AS TEXT) = CAST(&quot;external_ds&quot;.&quot;patient_id&quot; AS TEXT))</relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_0C88C5C641874A668A585F3E4E42262E]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Readmis vs.gender(p)' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_65EBEF26764041CE904FC3DF6A8644CD]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Readmis vs.gender(e)' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Readmis vs.gender(e)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>External Readmissions by Gender</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='patient+ (medical_data)' name='federated.07l76k310dnxj31a7ox410ujxgom' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07l76k310dnxj31a7ox410ujxgom'>
+            <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender (external_ds)]' derivation='None' name='[none:gender (external_ds):nk]' pivot='key' type='nominal' />
+            <column-instance column='[readmis (external_ds)]' derivation='None' name='[none:readmis (external_ds):nk]' pivot='key' type='nominal' />
+            <column-instance column='[gender (external_ds)]' derivation='Count' name='[pcto:cnt:gender (external_ds):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C88C5C641874A668A585F3E4E42262E]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender]' />
+              <groupfilter function='level-members' level='[readmis]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:readmis (external_ds):nk]' />
+              <groupfilter function='member' level='[none:readmis (external_ds):nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' />
+              <text column='[federated.07l76k310dnxj31a7ox410ujxgom].[pcto:cnt:gender (external_ds):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]</rows>
+        <cols>[federated.07l76k310dnxj31a7ox410ujxgom].[none:gender (external_ds):nk]</cols>
+      </table>
+      <simple-id uuid='{0AD44198-8080-4F2F-B4FA-7B3CA41B71BC}' />
+    </worksheet>
+    <worksheet name='Readmis vs.gender(p)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Internal Readmissions by Gender</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='patient+ (medical_data)' name='federated.07l76k310dnxj31a7ox410ujxgom' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07l76k310dnxj31a7ox410ujxgom'>
+            <_.fcp.ObjectModelTableType.true...column caption='patient' datatype='table' name='[__tableau_internal_object_id__].[patient_FAF5BD4F3F77412999E5486A0F2375E2]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[patient_FAF5BD4F3F77412999E5486A0F2375E2]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:patient_FAF5BD4F3F77412999E5486A0F2375E2:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[readmis]' derivation='None' name='[none:readmis:nk]' pivot='key' type='nominal' />
+            <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='patient' datatype='integer' name='[__tableau_internal_object_id__].[patient_FAF5BD4F3F77412999E5486A0F2375E2]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_65EBEF26764041CE904FC3DF6A8644CD]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender (external_ds)]' />
+              <groupfilter function='level-members' level='[readmis (external_ds)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:readmis:nk]' />
+              <groupfilter function='member' level='[none:readmis:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' shelf='rows' />
+          </_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.07l76k310dnxj31a7ox410ujxgom].[none:gender:nk]' value='41' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' />
+              <text column='[federated.07l76k310dnxj31a7ox410ujxgom].[__tableau_internal_object_id__].[pcto:cnt:patient_FAF5BD4F3F77412999E5486A0F2375E2:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]</rows>
+        <cols>[federated.07l76k310dnxj31a7ox410ujxgom].[none:gender:nk]</cols>
+      </table>
+      <simple-id uuid='{402844A5-A56E-4735-A0BC-F3B98B3E33CB}' />
+    </worksheet>
+    <worksheet name='avg.age(e)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>External Avg. Age</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='patient+ (medical_data)' name='federated.07l76k310dnxj31a7ox410ujxgom' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07l76k310dnxj31a7ox410ujxgom'>
+            <column caption='Age (External Ds)' datatype='integer' name='[age (external_ds)]' role='measure' type='quantitative' />
+            <column-instance column='[age (external_ds)]' derivation='Avg' name='[avg:age (external_ds):qk]' pivot='key' type='quantitative' />
+            <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[readmis (external_ds)]' derivation='None' name='[none:readmis (external_ds):nk]' pivot='key' type='nominal' />
+            <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_65EBEF26764041CE904FC3DF6A8644CD]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender (external_ds)]' />
+              <groupfilter function='level-members' level='[readmis (external_ds)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C88C5C641874A668A585F3E4E42262E]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender]' />
+              <groupfilter function='level-members' level='[readmis]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]'>
+            <groupfilter function='level-members' level='[none:readmis (external_ds):nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' value='40' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' value='Readmission Legend'>
+              <formatted-text>
+                <run>Readmission Legend</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07l76k310dnxj31a7ox410ujxgom].[avg:age (external_ds):qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{C1E6EC23-AF3E-4C5D-B2BE-637CD543E2F5}' />
+    </worksheet>
+    <worksheet name='avg.age(p)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Internal Avg. Age</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='patient+ (medical_data)' name='federated.07l76k310dnxj31a7ox410ujxgom' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07l76k310dnxj31a7ox410ujxgom'>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='Avg' name='[avg:age:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[readmis]' derivation='None' name='[none:readmis:nk]' pivot='key' type='nominal' />
+            <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_65EBEF26764041CE904FC3DF6A8644CD]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender (external_ds)]' />
+              <groupfilter function='level-members' level='[readmis (external_ds)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C88C5C641874A668A585F3E4E42262E]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender]' />
+              <groupfilter function='level-members' level='[readmis]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]'>
+            <groupfilter function='level-members' level='[none:readmis:nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.07l76k310dnxj31a7ox410ujxgom].[avg:age:qk]' field-type='quantitative' max='60.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.07l76k310dnxj31a7ox410ujxgom].[avg:age:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07l76k310dnxj31a7ox410ujxgom].[avg:age:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{F285A4C3-0645-406C-BF0F-6447CBB0B2DF}' />
+    </worksheet>
+    <worksheet name='avg.inital_day(p)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Internal Avg. Initial Days</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='patient+ (medical_data)' name='federated.07l76k310dnxj31a7ox410ujxgom' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07l76k310dnxj31a7ox410ujxgom'>
+            <column-instance column='[initial_days]' derivation='Avg' name='[avg:initial_days:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column caption='Initial Days' datatype='real' name='[initial_days]' role='measure' type='quantitative' />
+            <column-instance column='[readmis]' derivation='None' name='[none:readmis:nk]' pivot='key' type='nominal' />
+            <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_65EBEF26764041CE904FC3DF6A8644CD]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender (external_ds)]' />
+              <groupfilter function='level-members' level='[readmis (external_ds)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C88C5C641874A668A585F3E4E42262E]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender]' />
+              <groupfilter function='level-members' level='[readmis]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]'>
+            <groupfilter function='level-members' level='[none:readmis:nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]</rows>
+        <cols>[federated.07l76k310dnxj31a7ox410ujxgom].[avg:initial_days:qk]</cols>
+      </table>
+      <simple-id uuid='{76069161-DE34-4376-A556-AEAE02447579}' />
+    </worksheet>
+    <worksheet name='avg.inital_days(e)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>External Avg. Initial Days</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='patient+ (medical_data)' name='federated.07l76k310dnxj31a7ox410ujxgom' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07l76k310dnxj31a7ox410ujxgom'>
+            <column-instance column='[initial_days (external_ds)]' derivation='Avg' name='[avg:initial_days (external_ds):qk]' pivot='key' type='quantitative' />
+            <column caption='Gender (External Ds)' datatype='string' name='[gender (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column caption='Initial Days (External Ds)' datatype='integer' name='[initial_days (external_ds)]' role='measure' type='quantitative' />
+            <column-instance column='[readmis (external_ds)]' derivation='None' name='[none:readmis (external_ds):nk]' pivot='key' type='nominal' />
+            <column caption='Readmis (External Ds)' datatype='string' name='[readmis (external_ds)]' role='dimension' type='nominal' />
+            <column caption='Readmis' datatype='string' name='[readmis]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_65EBEF26764041CE904FC3DF6A8644CD]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender (external_ds)]' />
+              <groupfilter function='level-members' level='[readmis (external_ds)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C88C5C641874A668A585F3E4E42262E]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[gender]' />
+              <groupfilter function='level-members' level='[readmis]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]'>
+            <groupfilter function='level-members' level='[none:readmis (external_ds):nk]' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender,Readmis)]</column>
+            <column>[federated.07l76k310dnxj31a7ox410ujxgom].[Action (Gender (External Ds),Readmis (External Ds))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' value='Readmis'>
+              <formatted-text>
+                <run>Readmis</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]</rows>
+        <cols>[federated.07l76k310dnxj31a7ox410ujxgom].[avg:initial_days (external_ds):qk]</cols>
+      </table>
+      <simple-id uuid='{08A676F4-33AF-4E2F-AC94-9AB7C80C998A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='83833' id='31' param='horz' type-v2='layout-flow' w='98614' x='693' y='14816'>
+            <zone h='83833' id='7' type-v2='layout-basic' w='98614' x='693' y='14816'>
+              <zone h='19794' id='5' name='Readmis vs.gender(e)' w='51788' x='47519' y='78855'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='64039' id='6' name='avg.age(p)' w='24646' x='693' y='14816'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='64039' id='11' name='avg.age(e)' w='24655' x='25339' y='14816'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19794' id='13' name='Readmis vs.gender(p)' w='46826' x='693' y='78855'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='33912' id='14' name='avg.inital_days(e)' w='49313' x='49994' y='44943'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='30127' id='18' name='avg.inital_day(p)' w='49313' x='49994' y='14816'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='13465' id='33' param='vert' type-v2='layout-flow' w='98614' x='693' y='1351' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7044' id='34' type-v2='text' w='21814' x='38301' y='1243'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontsize='18'>Readmission Comparison</run>
+          </formatted-text>
+        </zone>
+        <zone h='8702' id='45' name='avg.age(e)' pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' type-v2='color' w='12527' x='43413' y='6906' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='49' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97298' id='48' param='vert' type-v2='layout-flow' w='98614' x='693' y='1351'>
+                <zone h='7044' id='34' type-v2='text' w='21814' x='38301' y='1243'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontsize='18'>Readmission Comparison</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='64039' id='6' is-fixed='true' name='avg.age(p)' w='24646' x='693' y='14816'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='64039' id='11' is-fixed='true' name='avg.age(e)' w='24655' x='25339' y='14816'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8702' id='45' name='avg.age(e)' pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' type-v2='color' w='12527' x='43413' y='6906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='233' h='30127' id='18' is-fixed='true' name='avg.inital_day(p)' w='49313' x='49994' y='14816'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='263' h='33912' id='14' is-fixed='true' name='avg.inital_days(e)' w='49313' x='49994' y='44943'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='19794' id='13' is-fixed='true' name='Readmis vs.gender(p)' w='46826' x='693' y='78855'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='19794' id='5' is-fixed='true' name='Readmis vs.gender(e)' w='51788' x='47519' y='78855'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5641ECE3-D21F-4919-B925-C4AC5BB3DABC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Readmis vs.gender(p)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{15A02079-CD8C-4455-837B-EF94A22B6D58}' />
+    </window>
+    <window class='worksheet' name='Readmis vs.gender(e)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0009BAD4-9335-4CCE-AB66-5DBFA80B133A}' />
+    </window>
+    <window class='worksheet' name='avg.age(p)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9E9514F3-1205-4F21-969B-44CC3C2AFFFC}' />
+    </window>
+    <window class='worksheet' name='avg.age(e)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FB78484C-4300-46DF-8813-789534AAC1F8}' />
+    </window>
+    <window class='worksheet' name='avg.inital_days(e)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis (external_ds):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ECDDEAF8-0473-4614-A180-750C8EC5DF94}' />
+    </window>
+    <window class='worksheet' name='avg.inital_day(p)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.07l76k310dnxj31a7ox410ujxgom].[none:readmis:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E07A66FF-44C4-4819-99D0-1C0D64049752}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Readmis vs.gender(e)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Readmis vs.gender(p)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='avg.age(e)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='avg.age(p)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='avg.inital_day(p)' />
+        <viewpoint name='avg.inital_days(e)' />
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{9B819465-3941-49B8-B763-00A28139F6F4}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='64' name='Readmis vs.gender(e)' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='85' name='Readmis vs.gender(p)' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='avg.age(e)' width='116'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='avg.age(p)' width='116'>
+      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
+    </thumbnail>
+    <thumbnail height='119' name='avg.inital_day(p)' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='119' name='avg.inital_days(e)' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
